@@ -1,0 +1,17 @@
+# Dépendances Python du projet
+# Installer avec : pip install -r requirements.txt
+
+# Génération de données fictives
+Faker==22.0.0
+
+# Connexion PostgreSQL
+psycopg2-binary==2.9.9
+
+# Appels API HTTP
+requests==2.31.0
+
+# Planification des tâches
+schedule==1.2.1
+
+# Utilitaires
+python-dotenv==1.0.0

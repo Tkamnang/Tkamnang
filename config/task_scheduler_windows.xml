@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Tâche planifiée Windows - Actualisation toutes les 10 heures
+  
+  Pour importer dans le Planificateur de tâches Windows :
+  1. Ouvrir "Planificateur de tâches" (taskschd.msc)
+  2. Action > Importer une tâche
+  3. Sélectionner ce fichier
+  4. Modifier le chemin du projet si nécessaire
+-->
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Actualisation dashboard Power BI - Collecte météo et données toutes les 10 heures</Description>
+    <Author>Dashboard Project</Author>
+  </RegistrationInfo>
+  <Triggers>
+    <TimeTrigger>
+      <Repetition>
+        <!-- Répétition toutes les 10 heures, indéfiniment -->
+        <Interval>PT10H</Interval>
+        <Duration>P9999D</Duration>
+        <StopAtDurationEnd>false</StopAtDurationEnd>
+      </Repetition>
+      <StartBoundary>2024-01-01T06:00:00</StartBoundary>
+      <Enabled>true</Enabled>
+    </TimeTrigger>
+    <!-- Démarrage au boot du système -->
+    <BootTrigger>
+      <Delay>PT2M</Delay>
+      <Enabled>true</Enabled>
+    </BootTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <ExecutionTimeLimit>PT30M</ExecutionTimeLimit>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+  </Settings>
+  <Actions>
+    <Exec>
+      <!-- IMPORTANT : Modifier ce chemin selon votre installation -->
+      <Command>python</Command>
+      <Arguments>C:\projet_dashboard\scripts\scheduler.py</Arguments>
+      <WorkingDirectory>C:\projet_dashboard</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

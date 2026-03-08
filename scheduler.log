@@ -1,0 +1,51 @@
+2026-03-05 23:07:48,212 - INFO - 🚀 Démarrage du scheduler...
+2026-03-05 23:07:48,215 - INFO - 📅 Fréquence : toutes les 10 heures
+2026-03-05 23:07:48,216 - INFO - ⚡ Première exécution immédiate...
+2026-03-05 23:07:48,216 - INFO - ============================================================
+2026-03-05 23:07:48,217 - INFO - 🕐 DÉMARRAGE COLLECTE - 2026-03-05 23:07:48
+2026-03-05 23:07:48,218 - INFO - ============================================================
+2026-03-05 23:07:48,219 - INFO - ▶️  Exécution de fetch_weather.py...
+2026-03-05 23:07:55,467 - INFO - ✅ fetch_weather.py terminé avec succès
+2026-03-05 23:07:55,468 - INFO - ▶️  Exécution de generate_data.py...
+2026-03-05 23:07:57,387 - ERROR - ❌ generate_data.py a échoué
+2026-03-05 23:07:57,388 - ERROR - 2026-03-05 23:07:57,120 - INFO - \U0001f680 Démarrage de la génération de données...
+2026-03-05 23:07:57,340 - INFO - \u2705 200 personnes générées + 20 doublons = 220 total
+Traceback (most recent call last):
+  File "c:\Users\LUNA MARKET\Desktop\projet_dashboard_scripts\projet_dashboard\scripts\generate_data.py", line 165, in <module>
+    insert_persons(persons)
+    ~~~~~~~~~~~~~~^^^^^^^^^
+  File "c:\Users\LUNA MARKET\Desktop\projet_dashboard_scripts\projet_dashboard\scripts\generate_data.py", line 133, in insert_persons
+    conn = get_connection()
+  File "c:\Users\LUNA MARKET\Desktop\projet_dashboard_scripts\projet_dashboard\scripts\generate_data.py", line 72, in get_connection
+    from config.db_config import DB_CONFIG
+ModuleNotFoundError: No module named 'config'
+
+2026-03-05 23:07:57,389 - WARNING - ⚠️ Cycle terminé avec des erreurs
+2026-03-05 23:07:57,390 - INFO - ============================================================
+2026-03-05 23:07:57,390 - INFO - ⏳ Scheduler actif. Appuyez sur Ctrl+C pour arrêter.
+2026-03-05 23:12:01,229 - INFO - 🚀 Démarrage du scheduler...
+2026-03-05 23:12:01,230 - INFO - 📅 Fréquence : toutes les 10 heures
+2026-03-05 23:12:01,230 - INFO - ⚡ Première exécution immédiate...
+2026-03-05 23:12:01,231 - INFO - ============================================================
+2026-03-05 23:12:01,232 - INFO - 🕐 DÉMARRAGE COLLECTE - 2026-03-05 23:12:01
+2026-03-05 23:12:01,232 - INFO - ============================================================
+2026-03-05 23:12:01,233 - INFO - ▶️  Exécution de fetch_weather.py...
+2026-03-05 23:12:08,178 - INFO - ✅ fetch_weather.py terminé avec succès
+2026-03-05 23:12:08,179 - INFO - ▶️  Exécution de generate_data.py...
+2026-03-05 23:12:09,332 - INFO - ✅ generate_data.py terminé avec succès
+2026-03-05 23:12:09,332 - INFO - 🎉 Cycle complet terminé avec succès
+2026-03-05 23:12:09,333 - INFO - ============================================================
+2026-03-05 23:12:09,333 - INFO - ⏳ Scheduler actif. Appuyez sur Ctrl+C pour arrêter.
+2026-03-05 23:54:55,573 - INFO - 🚀 Démarrage du scheduler...
+2026-03-05 23:54:55,576 - INFO - 📅 Fréquence : toutes les 10 heures
+2026-03-05 23:54:55,576 - INFO - ⚡ Première exécution immédiate...
+2026-03-05 23:54:55,576 - INFO - ============================================================
+2026-03-05 23:54:55,577 - INFO - 🕐 DÉMARRAGE COLLECTE - 2026-03-05 23:54:55
+2026-03-05 23:54:55,577 - INFO - ============================================================
+2026-03-05 23:54:55,578 - INFO - ▶️  Exécution de fetch_weather.py...
+2026-03-05 23:55:27,730 - INFO - ✅ fetch_weather.py terminé avec succès
+2026-03-05 23:55:27,731 - INFO - ▶️  Exécution de generate_data.py...
+2026-03-05 23:55:30,338 - INFO - ✅ generate_data.py terminé avec succès
+2026-03-05 23:55:30,338 - INFO - 🎉 Cycle complet terminé avec succès
+2026-03-05 23:55:30,339 - INFO - ============================================================
+2026-03-05 23:55:30,339 - INFO - ⏳ Scheduler actif. Appuyez sur Ctrl+C pour arrêter.
